@@ -1,0 +1,532 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+:root {
+  --primary-color: #66e2d4;
+  --primary-text-color: #8e8e8e;
+  --header-text-color: #00306b;
+  --white-text-color: #fff;
+  --dark-text-color: #333;
+  --navbar-bg-color: #9fc9ed;
+  --icon-bg-color: #66e2d31c;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid #f00 !important; */
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+body p {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.footer-wrapper p {
+  font-size: 11px;
+}
+
+body h1 {
+  color: #dd0505;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: oblique;
+}
+
+body h2 {
+  color: rgb(49, 83, 136);
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  margin-block: 2rem;
+  font-size: 2.4rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 2px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+.list-inline {
+  display: inline-block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-70 {
+  width: 70%;
+  margin-left: 15%;
+  border-radius: 50px;
+}
+.w-30 {
+  width: 30%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-50 {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.social {
+  text-align: center;
+}
+
+.male {
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+
+.ovde {
+  background-color: rgb(235, 110, 15);
+}
+
+button {
+  background-color: rgb(149, 244, 222);
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.smanji {
+  margin: 0;
+}
+
+.mainmain {
+  background-color: azure;
+}
+
+.alen {
+  text-align: center;
+}
+
+.footer-wrapper {
+  text-align: center;
+  font-size: 12px;
+  padding: 5px 10px;
+  padding-top: 5px;
+  color: #858585;
+  padding-top: 15px;
+  background-color: #cecece6e;
+  font-weight: 400 !important;
+  margin-top: 20px;
+}
+
+a {
+  background-color: rgb(209, 248, 239);
+}
+
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  [class*="col-"] {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .list-small-block {
+    display: block;
+  }
+  .social div {
+    width: 10%;
+    margin: 0;
+    display: inline-block;
+  }
+  .smanji {
+    text-align: left;
+    margin: 0;
+  }
+
+  .social .none {
+    display: none;
+  }
+}
+
+/**********************/
+/* SPINNING WHEEL */
+/**********************/
+
+.wheel {
+  margin-block: 5rem;
+}
+
+.mainbox {
+  position: relative;
+  width: 50rem;
+  height: 50rem;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.mainbox::before {
+  content: "";
+  position: absolute;
+  width: 3.2rem;
+  height: 3.2rem;
+  color: rgb(80, 76, 76);
+  background: url("https://learndesigntutorial.com/wp-content/uploads/2021/03/arrow-left.png")
+    no-repeat;
+  background-size: 3.2rem;
+  top: 50%;
+  right: -3rem;
+  transform: translateY(-50%);
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 10px solid rgb(80, 76, 76);
+  box-shadow: inset 0 10px 5px rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform cubic-bezier(0.25, 0.1, 0.25, 1) 8s;
+}
+
+.box span {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  position: absolute;
+}
+
+.span1 {
+  top: 12rem;
+  left: 0;
+  background-color: #7fa1be;
+
+  clip-path: polygon(0 92%, 100% 50%, 0 8%);
+}
+
+.span2 {
+  top: 12rem;
+  right: 0;
+  background-color: #9fc9ed;
+  clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+}
+
+.span3 {
+  bottom: 0;
+  left: 12rem;
+  background-color: #6f8da6;
+
+  clip-path: polygon(50% 0, 8% 100%, 92% 100%);
+}
+.span4 {
+  top: 0;
+  left: 12rem;
+  background-color: #b2d4f1;
+  clip-path: polygon(50% 100%, 92% 0, 8% 0);
+}
+
+/* TEST */
+
+.box1 .span4 {
+  background: #ecd450;
+}
+
+.box1 .span1 {
+  background: #ec5050;
+}
+.box2 .span1 {
+  background: #6fec50;
+}
+
+/* KRAJ TESTA */
+
+.box1 .span3 b {
+  transform: translate(-50%, -50%) rotate(-270deg);
+}
+
+.box1 .span1 b,
+.box2 .span1 b {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.box2 .span3 b {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.box1 .span4 b,
+.box2 .span4 b {
+  transform: translate(-50%, -50%) rotate(-85deg);
+}
+
+.box2 {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-135deg);
+}
+
+span b {
+  width: 100%;
+  /* height: 7rem; */
+  line-height: 6.5rem;
+  /* border-radius: 50%; */
+  font-size: 2rem;
+  text-align: center;
+  color: var(--white-text-color);
+  /* background-color: white; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* box-shadow: inset 0 3px 3px 0 #717171; */
+}
+
+.spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  border: 0.4rem solid white;
+  background-color: #ff5722;
+  color: #fff;
+  box-shadow: 0 5px 20px #000;
+  font-weight: bold;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.spin:active {
+  width: 7rem;
+  height: 7rem;
+  font-size: 1.2rem;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--header-text-color);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  padding: 3rem 1rem;
+  opacity: 0;
+  text-align: center;
+}
+
+.message a {
+  text-decoration: none;
+}
+
+.message-animation {
+  z-index: 10;
+  opacity: 1;
+  animation: winner 0.7s linear;
+}
+
+@keyframes winner {
+  0% {
+    transform: scale(0);
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  35% {
+    transform: scale(0.35);
+    /* top: 50%;
+    left: 50%; */
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.message p {
+  /* font-weight: bold; */
+  color: var(--white-text-color);
+  font-size: 4rem;
+  line-height: 4rem;
+  font-family: "Acme", sans-serif;
+}
+
+.message p:first-child {
+  margin-top: 5rem;
+}
+
+.message p:last-child {
+  margin-top: 5rem;
+}
+
+.mainbox.animate::before {
+  animation: animateArrow 0.7s ease infinite;
+}
+@keyframes animateArrow {
+  50% {
+    right: -4rem;
+  }
+}
+
+.message span {
+  color: #ff5722;
+  font-weight: 600;
+  font-size: 6rem;
+  position: absolute;
+  left: 40%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.fireworks img {
+  width: 100%;
+}
+
+.fireworks {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.check-icon {
+  color: #4ae723;
+  font-size: 7rem;
+}
+
+.display {
+  z-index: 5555;
+}
+
+/**********************/
+/* KRAJ SPINNING WHEEL */
+/**********************/
+
+/**********************/
+/* FORMA */
+/**********************/
+
+.forma {
+  display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 50rem;
+  margin: 5rem auto;
+  transform: translate(-200%, -200%);
+  transition: transform 2s ease-in;
+  border-radius: 5px;
+}
+
+.forma button {
+  font-size: 1.9rem;
+}
+
+.form-title {
+  color: var(--white-text-color);
+  padding: 3.2rem;
+  background-color: var(--navbar-bg-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 40%;
+    overflow-x: hidden;
+  }
+
+  body h2 {
+    font-size: 3.4rem;
+  }
+
+  .span1 {
+    top: 11.4rem;
+  }
+  .span3 {
+    left: 11.4rem;
+  }
+}
